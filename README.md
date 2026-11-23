@@ -1,9 +1,16 @@
-﻿# 003_robot v3.2 (no base rotation)
+﻿# STM32-Tracked-Robot
+校内竞赛履带机器人电控工程
 
-Build:
-  cmake --preset Debug
-  cmake --build build/Debug
+## 项目简介
+基于STM32F103、CMake构建，履带机器人主控程序，支持遥控控制、电机驱动、舵机夹爪控制等功能。
 
-Flash (UART bootloader): BOOT0=1, TXD->PA10, RXD->PA9, then run tools/flash.ps1
-prebuilt/robot_003.hex matches this source exactly.
-NOTE: pin map NOT compatible with Robat5 (PA8/PB0 differ). Do not cross-flash.
+## 本人负责部分
+- 工程代码环境搭建与配置
+- 相关控制代码的编写、调试
+- 硬件元件接线、电路连接工作
+
+## 开发环境
+主控：STM32F103
+驱动：BTS7960 H桥驱动模块
+通信：i-BUS接收机
+构建工具：CMake
